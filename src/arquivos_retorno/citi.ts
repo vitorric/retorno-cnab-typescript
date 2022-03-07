@@ -382,10 +382,10 @@ export default class ArquivoRetornoCiti {
     const boletosSimples = boletos.map((b) => ({
       identificacaoTitulo: b.identificacaoTitulo,
       nossoNumero: b.nossoNumero,
-      codigoOcorrencia: b.codigoOcorrencia,
+      codigoOcorrencia: b.codigoOcorrencia.trim(),
       msgOcorrencia: this.codigosOcorrencia[b.codigoOcorrencia],
       dataOcorrencia: formatarData(b.dataOcorrencia),
-      codigoRejeicao: this.motivosRejeicao(b.codigoOcorrencia, b.motivoRejeicao),
+      codigoRejeicao: b.motivoRejeicao.trim(),
       msgRejeicao: this.motivosRejeicao(b.codigoOcorrencia, b.motivoRejeicao),
       dataVencimento: formatarData(b.dataVencimento),
       valorTitulo: formatarNumero(b.valorNominalTitulo),
