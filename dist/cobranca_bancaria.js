@@ -10,6 +10,7 @@ class CobrancaBancaria {
             if (cnab400.bank === 'CITI') {
                 return this.retornoCNABCiti.RetornoCNAB400(Object.assign({}, cnab400));
             }
+            return null;
         };
         this.retornoCNABCiti = new citi_1.default();
     }

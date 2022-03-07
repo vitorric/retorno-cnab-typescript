@@ -367,7 +367,8 @@ class ArquivoRetornoCiti {
             valorTitulo: (0, utils_1.formatarNumero)(b.valorNominalTitulo),
             valorLiquidoRecebido: (0, utils_1.formatarNumero)(b.valorLiquidoRecebido),
             valorDescontoConcedido: (0, utils_1.formatarNumero)(b.valorDescontoConcedido),
-            valorJurosAcrescimo: (0, utils_1.formatarNumero)(b.valorJurosAcrescimo)
+            valorJurosAcrescimo: (0, utils_1.formatarNumero)(b.valorJurosAcrescimo),
+            numeroSequecialRegistro: parseInt(b.numeroSequecialRegistro, 10)
         }));
         return {
             cabecalho: {

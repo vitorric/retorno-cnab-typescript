@@ -1,3 +1,4 @@
+import { TRetornoCNAB } from './arquivos_retorno/type';
 export declare type TCNAB400 = {
     fileName: string;
     dir: string;
@@ -9,5 +10,5 @@ export declare type TBank = {
 export default class CobrancaBancaria {
     private retornoCNABCiti;
     constructor();
-    RetornoCNAB400: (cnab400: TCNAB400 & TBank) => Promise<any>;
+    RetornoCNAB400: (cnab400: TCNAB400 & TBank) => Promise<TRetornoCNAB>;
 }
