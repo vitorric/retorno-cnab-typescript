@@ -1,6 +1,6 @@
 {
   "name": "retorno-cnab-typescript",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Lê o arquivo retorno do CNAB400",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -8,7 +8,8 @@
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules --no-notify exemplo/index.ts",
     "build": "rm -rf dist && tsc"
   },
-  "author": "Vitor Ricardo",
+  "author": "Vitor Ricardo <vitorricardo@outlook.com>",
+  "repository": "git+https://github.com/vitorric/retorno-cnab-typescript.git",
   "license": "ISC",
   "files": [
     "dist"
