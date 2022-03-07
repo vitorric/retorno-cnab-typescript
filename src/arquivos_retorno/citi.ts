@@ -1,5 +1,6 @@
 import { TCNAB400 } from 'src/cobranca_bancaria';
 import { lerArquivo, formatarNumero, formatarData } from '../utils';
+import { TRetornoCNAB } from './type';
 
 export default class ArquivoRetornoCiti {
   RetornoCNAB400 = async (cnab400: TCNAB400) => {
@@ -375,7 +376,7 @@ export default class ArquivoRetornoCiti {
     };
   };
 
-  private retornoTratado(arquivo): any {
+  private retornoTratado(arquivo): TRetornoCNAB {
     const { cabecalho, boletos, rodape } = arquivo;
 
     const boletosSimples = boletos.map((b) => ({
@@ -388,7 +389,8 @@ export default class ArquivoRetornoCiti {
       valorTitulo: formatarNumero(b.valorNominalTitulo),
       valorLiquidoRecebido: formatarNumero(b.valorLiquidoRecebido),
       valorDescontoConcedido: formatarNumero(b.valorDescontoConcedido),
-      valorJurosAcrescimo: formatarNumero(b.valorJurosAcrescimo)
+      valorJurosAcrescimo: formatarNumero(b.valorJurosAcrescimo),
+      numeroSequecialRegistro: parseInt(b.numeroSequecialRegistro, 10)
     }));
 
     return {

@@ -1,4 +1,5 @@
 import RetornoCNABCiti from './arquivos_retorno/citi';
+import { TRetornoCNAB } from './arquivos_retorno/type';
 
 export type TCNAB400 = {
   fileName: string;
@@ -17,10 +18,12 @@ export default class CobrancaBancaria {
     this.retornoCNABCiti = new RetornoCNABCiti();
   }
 
-  RetornoCNAB400 = async (cnab400: TCNAB400 & TBank ) => {
+  RetornoCNAB400 = async (cnab400: TCNAB400 & TBank ): Promise<TRetornoCNAB> => {
     if (cnab400.bank === 'CITI') {
       return this.retornoCNABCiti.RetornoCNAB400({...cnab400})
     }
+
+    return null;
   };
 
 }
