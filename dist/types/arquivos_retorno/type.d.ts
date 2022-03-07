@@ -5,8 +5,10 @@ export declare type TBoletoCNAB = {
     identificacaoTitulo: string;
     nossoNumero: string;
     codigoOcorrencia: string;
+    msgOcorrencia: string;
     dataOcorrencia: string;
-    motivoRejeicao: string;
+    codigoRejeicao: string;
+    msgRejeicao: string;
     dataVencimento: string;
     valorTitulo: string;
     valorLiquidoRecebido: string;

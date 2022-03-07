@@ -360,9 +360,11 @@ class ArquivoRetornoCiti {
         const boletosSimples = boletos.map((b) => ({
             identificacaoTitulo: b.identificacaoTitulo,
             nossoNumero: b.nossoNumero,
-            codigoOcorrencia: this.codigosOcorrencia[b.codigoOcorrencia],
+            codigoOcorrencia: b.codigoOcorrencia.trim(),
+            msgOcorrencia: this.codigosOcorrencia[b.codigoOcorrencia],
             dataOcorrencia: (0, utils_1.formatarData)(b.dataOcorrencia),
-            motivoRejeicao: this.motivosRejeicao(b.codigoOcorrencia, b.motivoRejeicao),
+            codigoRejeicao: b.motivoRejeicao.trim(),
+            msgRejeicao: this.motivosRejeicao(b.codigoOcorrencia, b.motivoRejeicao),
             dataVencimento: (0, utils_1.formatarData)(b.dataVencimento),
             valorTitulo: (0, utils_1.formatarNumero)(b.valorNominalTitulo),
             valorLiquidoRecebido: (0, utils_1.formatarNumero)(b.valorLiquidoRecebido),
